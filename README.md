@@ -1,6 +1,6 @@
 # Mike-C-Sanders- Algorithm Practices
-Algorithm practice with Quick find, Quick union, and improving both Quick find and quick union
+Algorithms and Datastructures are the fundamentals of a strong programmer. This repository is part of this life long persuit of mastery. 
 
-## File Notes
+## Current Algorithms
 
-Each file is created using JS as a base. I include Big O notation in the file for notes and refernce.
+At this time QuickFind, UnionFind are the two primary algorithms created in this repository. More will be added as time goes on.
