@@ -1,14 +1,19 @@
-# Mike-C-Sanders- Algorithm Practices
+# Mike-C-Sanders- Algorithm/Data-Structure Practices
 Algorithms and Datastructures are the fundamentals of a strong programmer. This repository is part of this life long persuit of mastery. 
 
-This repository is meant to serve as a log and a central location for the algorithms I'm practicing.
+This repository is meant to serve as a log and a central location for the algorithms and data-structures I'm practicing/working on. I'm including some of the problems that I've worked on using these Algs and DSs. 
 
 ## Current Algorithms
 
-At this time QuickFind, UnionFind are the two primary algorithms created in this repository. More will be added as time goes on.
+- QuickFind
+- UnionFind
+- BinarySearch
+
+## Data-Structures
+
+- Linked List: a few methods including insert node, insert last node, remove node, insert at index, and clear list.
 
 ## Practice problems
 
-The practice problems folder has a variety of problems related to different algoritms. The goal of this folder is to hold the different practice algorithms I create along the way. 
-
-The 3Sum problem is included at the moment.
+- 3Sum Problem (updated with brute force method and a revised version using BinarySearch BigO of n^2Logn)
+- FizzBuzz
