@@ -12,6 +12,7 @@ This repository is meant to serve as a log and a central location for the algori
 ## Data-Structures
 
 - Linked List: a few methods including insert node, insert last node, remove node, insert at index, and clear list.
+- Stacks: push and pop methods. Really basic for practice.
 
 ## Practice problems
 
