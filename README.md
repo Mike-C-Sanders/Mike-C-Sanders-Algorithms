@@ -8,6 +8,9 @@ This repository is meant to serve as a log and a central location for the algori
 - QuickFind
 - UnionFind
 - BinarySearch
+- Selection sort 
+- Insertion Sort
+- Shell Sort
 
 ## Data-Structures
 
