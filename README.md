@@ -10,7 +10,7 @@ This repository is meant to serve as a log and a central location for the algori
 - BinarySearch
 - Selection sort 
 - Insertion Sort
-- Shell Sort
+- Shell Sort - using 3x+1 incrementing for a Big O of nlogn.
 
 ## Data-Structures
 
