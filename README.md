@@ -22,3 +22,4 @@ This repository is meant to serve as a log and a central location for the algori
 
 - 3Sum Problem (updated with brute force method and a revised version using BinarySearch BigO of n^2Logn)
 - FizzBuzz
+- Shuffle Deck: using a deck of cards, created a shuffle algorithm to shuffle the deck. 
