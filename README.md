@@ -14,6 +14,7 @@ This repository is meant to serve as a log and a central location for the algori
 - Insertion Sort
 - Shell Sort - using 3x+1 incrementing for a Big O of nlogn.
 - Merge Sort - using recursion for implementation. 
+- Quicksort - my first pass at quicksort. There's currently a bug in my solution, looking for a resolution to the infinite loop.
 
 ## Data-Structures
 
