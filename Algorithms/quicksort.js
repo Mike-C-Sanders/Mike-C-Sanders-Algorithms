@@ -18,59 +18,50 @@
  * - Exchange a[lo] with a[j]
  */
 
- //exchange function
-function exchange(arr, i, j){
-    const temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-    return arr;
-}
-//Function for partition phase I
- function partitionQS(arr, lo, hi){
-     let i = 0, j =hi;
-     while(true){
-         //find item on the left of the array to swap
-         while(arr[i] < arr[lo]){
-             if(i === hi) break;
-             i++;
-         }
-         //find item on the right of the array to swap
-         while(arr[j] > arr[lo]){
-             if(j === lo) break; 
-             j--;
-         }
-         //check if the pointers ever cross. Break if they do
-         if(i >= j) break;
-         //swap
-         exchange(arr, i, j);
-     }
-     //swap with partitioning item
-    exchange(arr, j, lo);
-    //return index of item now known to be in place
-    return j;
-     
+//first step is to create our partition function
+
+ function partition(array, start, end){
+//Taking the last element as the pivot
+    const pivotPoint = array[end];
+    let pivotIndex = start;
+    for(let i = start ; i < end; i++){
+        if(array[i] < pivotPoint){
+            //perform a swap
+            [array[i], array[pivotIndex]] = [array[pivotIndex], array[i]];
+            //move pivot to next element.
+            pivotIndex++;
+        }
+    }
+    //Putting the pivot value in the middle
+    [array[pivotIndex], array[end]] = [array[end], array[pivotIndex]];
+    return pivotIndex;
+
+ }
+
+ //recursive implementation
+
+ function quickSortR(array, start, end){
+     //basecase to end the recurssoin
+    if(start >= end) return;
+
+    let index = partition(array, start, end);
+
+    quickSortR(array, start, index-1);
+    quickSortR(array, index+1, end);
+
  }
 //Fisher Yates shuffle sort - https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates'_original_method
- function shuffle(arr){
-     for(let i = arr.length -1; i > 0; i--){
-         const j = Math.floor(Math.random()* i);
-         exchange(arr, i, j);
-     }
-     return arr;
+function shuffle(arr){
+    for(let i = arr.length -1; i > 0; i--){
+        const j = Math.floor(Math.random()* i);
+        exchange(arr, i, j);
+    }
+    return arr;
 
- }
-//recursively sort the array
-function qSort(arr, lo, hi){
-    if(hi <= lo) return;
-    let j = partitionQS(arr, lo, hi);
-    qSort(arr, lo, j-1);
-    qSort(a, j+1, hi);
 }
 
-
-let a = [4,1,3,-5,-12,33,22,3,65,106,-77,-3,-6,7,2,9,44,32,35,-99,-91,90];
-console.log(a);
+let a = [7, -2, 4, 1, 6, 5, 0, -4, 2, 5, 11, 32, 105, -43, 8];
 a = shuffle(a);
-console.log(a);
-a = qSort(a, 0, a.length-1);
-console.log(a);
+quickSortR(a, 0, a.length - 1);
+
+console.log(a)
